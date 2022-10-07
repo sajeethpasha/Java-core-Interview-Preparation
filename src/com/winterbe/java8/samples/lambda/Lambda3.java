@@ -21,7 +21,17 @@ public class Lambda3 {
         void foo();
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
+        // This function returns a random value.
+        Supplier<Double> randomValue = () -> Math.random();
+
+        // Print the random value using get()
+        System.out.println("supplier"+randomValue.get());
+        System.out.println("supplier"+randomValue.get());
+        System.out.println("supplier"+randomValue.get());
+
+    }
+    public static void test1(String[] args) throws Exception {
 
         // Predicates
 

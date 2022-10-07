@@ -26,11 +26,13 @@ public class Lambda2 {
         P create(String firstName, String lastName);
     }
 
+
+
     interface Pers {
          void create( String lastName);
     }
 
-    public static void main(String[] args) {
+    public static void test1(String[] args) {
         Converter<String, Integer> integerConverter1 = (from) -> Integer.valueOf(from);
         Integer converted1 = integerConverter1.convert("123");
         System.out.println(converted1);   // result: 123
@@ -55,5 +57,29 @@ public class Lambda2 {
         Person person = personFactory.create("Peter", "Parker");
 
 
+
+
          }
+
+    public static void main(String[] args) {
+        Converter<String,String> f=new methodRef()::dataTransform;
+
+        //System.out.println( f.convert("sajeeth"));
+        mr(new methodRef()::dataTransform);
+
+    }
+
+    public  static void mr(Converter< String,String> d)
+    {
+        System.out.println(d.convert("hiiii"));
+    }
+
+}
+
+class  methodRef
+{
+    String dataTransform(String str)
+    {
+        return "data is changed "+str;
+    }
 }

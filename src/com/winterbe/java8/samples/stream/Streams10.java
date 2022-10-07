@@ -43,8 +43,8 @@ public class Streams10 {
 //        test5(persons);
 //        test6(persons);
 //        test7(persons);
-//        test8(persons);
-        test9(persons);
+        test8(persons);
+//        test9(persons);
     }
 
     private static void test1(List<Person> persons) {

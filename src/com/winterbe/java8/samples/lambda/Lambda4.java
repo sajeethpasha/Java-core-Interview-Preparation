@@ -32,6 +32,7 @@ public class Lambda4 {
         stringConverter3.convert(23);
 
         System.out.println(array[0]);
+
     }
 
     public static void main(String[] args) {
